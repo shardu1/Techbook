@@ -1,0 +1,20 @@
+<div class="post-box {% block css_category %}{% endblock %}">
+    <img src="{% block img_link %}{% endblock %}" alt="" class="post-img">
+    <h2 class="category">{% block category %}{% endblock %}</h2>
+    <a href="{% block blog_link %}{% endblock %}" class="post-title">
+        {% block title %} {% endblock %}
+    </a>
+    <span class="post-date">16 April</span>
+    <p class="post-description">Basic code example: I will explain the all concepts by using this example. If you are not able to understand the below concepts. Please look at the example. var n = 2;
+        function sum(num) {
+         var result = num + num;
+         return result;
+        }
+        var sum2 = sum(n);
+        var sum2 = sum(4); Remember…</p>
+    <!-- Profile -->
+    <!-- <div class="profile">
+        <img src="https://source.unsplash.com/1600x600/?Marques" alt="" class="profile-img">
+        <span class="profile-name">Marques Brown</span>
+    </div> -->
+</div>{% block post %}{% endblock %}
