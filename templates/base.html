@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <!-- Link to CSS -->
+    
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <!-- Box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- NavBar -->
+        <div class="nav container">
+            <!-- Logo -->
+        <a href="/" class="logo">Tech<span>Book</span></a>
+        <!-- Login Btn -->
+        <a href="#" class="login">Login</a>
+        </div>
+    </header>
+            
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="home-text container">
+            <h2 class="home-title">The TechBook Blogs</h2>
+            <span class="home-subtitle">Unveiling the World of Innovation and Progress</span>
+        </div>
+    </section>
+
+    {% block body %}  {% endblock body %}
+<!-- JQuery -->
+        <script
+            src ="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        <!-- Java script -->
+        <script src="{%static 'js/main.js' %}"></script>
+</body>
+</html>

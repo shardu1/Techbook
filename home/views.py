@@ -2,5 +2,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return render(request,'techbook/html/t-index.html')
+    return render(request,'home/html/t-index.html')
 
