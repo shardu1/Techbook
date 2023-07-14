@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechBook</title>
     <!-- Link to CSS -->
-    
     {% load static %}
     <link rel="stylesheet" href="{%static 'css/style.css' %}">
     <!-- Box icons -->
@@ -16,9 +15,24 @@
     <!-- Header -->
     <header>
         <!-- NavBar -->
-        <div class="nav container">
+        <div class="nav container">       
             <!-- Logo -->
         <a href="#" class="logo">Tech<span>Book</span></a>
+        <!-- Home -->
+        <div class="nav-home">
+            <a href="home.html" class="title">Home</a> 
+        </div>
+
+        <!-- News -->
+        <div class="nav-news">
+            <a href="home.html" class="title">News</a>
+        </div>
+
+        <!-- Blogs -->
+        <div class="nav-Blogs">
+            <a href="home.html" class="title">Blogs</a>
+        </div>
+
         <!-- Login Btn -->
         <a href="#" class="login">Login</a>
         </div>
@@ -39,43 +53,33 @@
             <span class="filter-item" data-filter="technology">Technology</span>
             <span class="filter-item" data-filter="webdevelopment">Web Development</span>
             <span class="filter-item" data-filter="cybersecurity">Cyber Security</span>
+            <!-- search bar -->
+            <div class="search-container">
+                <input type="text" placeholder="Search">
+                <button type="submit">Search</button>
+            </div>                            
         </div>
-       
-        <!-- Posts -->
+           <!-- Posts -->
         <section class="post container">
             <!-- Post Box 1 -->
-            <div class="post-box webdevelopment">
-                <img src="https://miro.medium.com/v2/resize:fill:112:112/1*gZUKg6mqJ0G8mjmt_rvs4w.png" alt="" class="post-img">
-                <h2 class="category">Web Development</h2>
-                <a href="https://medium.com/@lovishduggal11/how-javascript-code-is-executed-2b9f053d0c3c?source=tag_page---------5-84--------------------3857c973_83d9_4cbc_bc8b_337231f6e59c-------17" class="post-title">
-                    How JavaScript code is executed?
+            <div class="post-box technology">
+                <img src="post-1.jpg" alt="" class="post-img">
+                <h2 class="category">Technology</h2>
+                <a href="post-page.html" class="post-title">
+                    How to Create Best blog website using HTML & CSS
                 </a>
                 <span class="post-date">16 April</span>
-                <p class="post-description">Basic code example: I will explain the all concepts by using this example. If you are not able to understand the below concepts. Please look at the example. var n = 2;
-                    function sum(num) {
-                     var result = num + num;
-                     return result;
-                    }
-                    var sum2 = sum(n);
-                    var sum2 = sum(4); Remember…</p>
+                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, vel.</p>
                 <!-- Profile -->
-                <!-- <div class="profile">
+                <div class="profile">
                     <img src="https://source.unsplash.com/1600x600/?Marques" alt="" class="profile-img">
                     <span class="profile-name">Marques Brown</span>
-                </div> -->
+                </div>
             </div>
-
-
-
-
-
-
-
-
              <!-- Post Box 2 -->
-              <div class="post-box technology">
+              <div class="post-box webdevelopment">
                 <img src="post-2.jpg" alt="" class="post-img">
-                <h2 class="category">Technology</h2>
+                <h2 class="category">Web Development</h2>
                 <a href="post-page.html" class="post-title">
                     How to Create Best blog website using HTML & CSS
                 </a>
@@ -202,7 +206,7 @@
 
            <!-- footer -->
            <div class="footer container">
-            <p>&#169; 2023 TechBook All Right Reserved</p>
+            <p>&#169; TechBook All Right Reserved</p>
             <div class="social">
                 <a herf="#"><i class='bx bxl-facebook'></i></a>
                 <a herf="#"><i class='bx bxl-instagram'></i></a>
@@ -210,18 +214,12 @@
                 <a herf="#"><i class='bx bxl-linkedin'></i></a>
             </div>
            </div>
-
-
-
-
-
-
         <!-- JQuery -->
         <script
             src ="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
             crossorigin="anonymous"></script>
         <!-- Java script -->
-        <script src="{%static 'js/main.js' %}"></script>
+        <script src="js/main.js"></script>
 </body>
 </html>
