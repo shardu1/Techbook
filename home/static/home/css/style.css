@@ -302,3 +302,84 @@ header.shadow .logo {
     align-items: center;
     row-gap: 1rem;
 }
+
+{% comment %} home css  {% endcomment %}
+.about-container {
+    position: relative;
+    width: 100%;
+    display: flex !important;
+    justify-content: left;
+    align-items: left;
+}
+
+.about-container .contentBx {
+    max-width: 50%;
+    width: 50%;
+    text-align: left;
+    padding-right: 40px;
+}
+
+.titleText {
+    font-weight: 600;
+    color: #111;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.title-text {
+    color:#111;
+    font-size: 1em;
+}
+
+.about-container {
+    position: relative;
+    width: 100%;
+    display: flex !important;
+    justify-content: right;
+    align-items: right;
+}
+
+.about-containerone .contentBy {
+    max-width: 50%;
+    width: 50%;
+    text-align: left;
+    padding-right: 30px;
+}
+
+.titleTextone {
+    font-weight: 600;
+    color: #111;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.title-textone {
+    color:#111;
+    font-size: 1em;
+}
+.btn2 {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    background: var(--bg-color);
+    border: 1px solid var(--second-color);
+    color: #333;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.btn2:hover {
+    color: var(--second-color);
+}
+.btn3 {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    background: var(--bg-color);
+    border: 1px solid var(--second-color);
+    color: #333;
+    text-decoration: none;
+    transition: 0.5s;
+}

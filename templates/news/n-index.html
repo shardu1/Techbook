@@ -17,147 +17,26 @@
         <section class="post container">
             <!-- Post Box 1 -->
            
-            <div class="post-box cybersecurity">
-                <img src="https://source.unsplash.com/1600x600/?Programming" alt="" class="post-img">
-                <h2 class="category">Cyber Security</h2>
-                <a href="post-page.html" class="post-title">
-                    How to Create Best blog website using HTML & CSS
+            {% for post in allPosts  %}
+            <div class="post-box {{post.tag}}">
+                <img src="{{post.imgurl}}" alt="" class="post-img">
+                <!-- <h2 class="category">Web Development</h2> -->
+                <a href="{{post.blogurl}}" class="post-title">
+                    {{post.title}}
                 </a>
-                <span class="post-date">16 April</span>
-                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, vel.</p>
-                <!-- Profile -->
-                <div class="profile">
-                    <img src="https://source.unsplash.com/1600x600/?Marques" alt="" class="profile-img">
-                    <span class="profile-name">Marques Brown</span>
-                </div>
+                <p class="post-description">{{post.description}}</p>
+            </div>
+            {% endfor %}
+
+            <div class="post-box mech">
+                <img src="https://insights.globalspec.com/images/assets/713/19713/13880522763_fba0ba9dee_c_Hero.jpg" alt="" class="post-img">
+                <!-- <h2 class="category">AI</h2> -->
+                <a href="https://energyeducation.ca/encyclopedia/Internal_combustion_engine/" class="post-title">
+                    Internal combustion engine
+                </a>
+                <p class="post-description">Internal combustion engines (ICE) are the most common form of heat engines, as they are used in vehicles, boats, ships, airplanes, and trains. They are named as such because the fuel is ignited in order to do work inside the engine.[1] The same fuel and air mixture is then emitted as exhaust. This can be done using a piston (called a reciprocating engine), or with a turbine.</p>
             </div>
 
-             <!-- Post Box 2 -->
-              <div class="post-box webdevelopment">
-                <img src="https://source.unsplash.com/1600x600/?Blockchain" alt="" class="post-img">
-                <h2 class="category">Web Development</h2>
-                <a href="post-page.html" class="post-title">
-                    How to Create Best blog website using HTML & CSS
-                </a>
-                <span class="post-date">16 April</span>
-                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, vel.</p>
-                <!-- Profile -->
-                <div class="profile">
-                    <img src="https://source.unsplash.com/1600x600/?Marques" alt="" class="profile-img">
-                    <span class="profile-name">Marques Brown</span>
-                </div> 
-              </div>
-
-               <!-- Post Box 3 -->
-               <div class="post-box cybersecurity">
-                <img src="https://source.unsplash.com/1600x600/?Programming" alt="" class="post-img">
-                <h2 class="category">Cyber Security</h2>
-                <a href="post-page.html" class="post-title">
-                    How to Create Best blog website using HTML & CSS
-                </a>
-                <span class="post-date">16 April</span>
-                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, vel.</p>
-                <!-- Profile -->
-                <div class="profile">
-                    <img src="https://source.unsplash.com/1600x600/?Marques" alt="" class="profile-img">
-                    <span class="profile-name">Marques Brown</span>
-                </div> 
-              </div>
-
-            <!-- Post Box 4 -->
-            <div class="post-box technology">
-                <img src="https://source.unsplash.com/1600x600/?Neural+Networks" alt="" class="post-img">
-                <h2 class="category">Technology</h2>
-                <a href="post-page.html" class="post-title">
-                    How to Create Best blog website using HTML & CSS
-                </a>
-                <span class="post-date">16 April</span>
-                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, vel.</p>
-                <!-- Profile -->
-                <div class="profile">
-                    <img src="https://source.unsplash.com/1600x600/?Marques" alt="" class="profile-img">
-                    <span class="profile-name">Marques Brown</span>
-                </div>
-            </div>
-             <!-- Post Box 5 -->
-              <div class="post-box webdevelopment">
-                <img src="https://source.unsplash.com/1600x600/?Data" alt="" class="post-img">
-                <h2 class="category">Web Development</h2>
-                <a href="post-page.html" class="post-title">
-                    How to Create Best blog website using HTML & CSS
-                </a>
-                <span class="post-date">16 April</span>
-                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, vel.</p>
-                <!-- Profile -->
-                <div class="profile">
-                    <img src="https://source.unsplash.com/1600x600/?Marques" alt="" class="profile-img">
-                    <span class="profile-name">Marques Brown</span>
-                </div> 
-              </div>
-
-               <!-- Post Box 6 -->
-               <div class="post-box cybersecurity">
-                <img src="https://source.unsplash.com/1600x600/?Space" alt="" class="post-img">
-                <h2 class="category">Cyber Security</h2>
-                <a href="post-page.html" class="post-title">
-                    How to Create Best blog website using HTML & CSS
-                </a>
-                <span class="post-date">16 April</span>
-                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, vel.</p>
-                <!-- Profile -->
-                <div class="profile">
-                    <img src="https://source.unsplash.com/1600x600/?Marques" alt="" class="profile-img">
-                    <span class="profile-name">Marques Brown</span>
-                </div> 
-              </div>     
-
-              
-            <!-- Post Box 7 -->
-            <div class="post-box technology">
-                <img src="https://source.unsplash.com/1600x600/?Cyber+Security" alt="" class="post-img">
-                <h2 class="category">Technology</h2>
-                <a href="post-page.html" class="post-title">
-                    How to Create Best blog website using HTML & CSS
-                </a>
-                <span class="post-date">16 April</span>
-                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, vel.</p>
-                <!-- Profile -->
-                <div class="profile">
-                    <img src="https://source.unsplash.com/1600x600/?Marques" alt="" class="profile-img">
-                    <span class="profile-name">Marques Brown</span>
-                </div>
-            </div>
-             <!-- Post Box 8 -->
-              <div class="post-box webdevelopment">
-                <img src="https://source.unsplash.com/1600x600/?Artificial+intelligence" alt="" class="post-img">
-                <h2 class="category">Web Development</h2>
-                <a href="post-page.html" class="post-title">
-                    How to Create Best blog website using HTML & CSS
-                </a>
-                <span class="post-date">16 April</span>
-                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, vel.</p>
-                <!-- Profile -->
-                <div class="profile">
-                    <img src="https://source.unsplash.com/1600x600/?Artificial+intelligence" alt="" class="profile-img">
-                    <span class="profile-name">Marques Brown</span>
-                </div> 
-              </div>
-
-               <!-- Post Box 9 -->
-               <div class="post-box cybersecurity">
-                <img src="https://source.unsplash.com/1600x600/?hacking" alt="" class="post-img">
-                <h2 class="category">Cyber Security</h2>
-                <a href="post-page.html" class="post-title">
-                    How to Create Best blog website using HTML & CSS
-                </a>
-                <span class="post-date">16 April</span>
-                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, vel.</p>
-                <!-- Profile -->
-                <div class="profile">
-                    <img src="https://source.unsplash.com/1600x600/?Marques" alt="" class="profile-img">
-                    <span class="profile-name">Marques Brown</span>
-                </div> 
-              </div>
         </section>
 
            <!-- footer -->

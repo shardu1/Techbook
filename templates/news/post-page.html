@@ -9,7 +9,7 @@
     {%load static%}
     <link rel="stylesheet" href="{%static 'css/style.css' %}">
     <!-- Box icons -->
-    <link href='https://venturebeat.com/wp-content/uploads/2022/10/GettyImages-1351959217-BlackSalmon.jpg?w=1200&strip=all' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
@@ -30,13 +30,11 @@
             <!-- Back to Home -->
             <a href="/" class="back-home">Back To Home</a>
             <!-- titlel -->
-            <h1 class="header-title">Why Web2 developers are hesitant to join the blockchain revolution</h1>
+            <h1 class="header-title">{{post.title}}</h1>
             <!-- Post Image -->
-            <img src="https://venturebeat.com/wp-content/uploads/2022/10/GettyImages-1351959217-BlackSalmon.jpg?w=1200&strip=all" alt="" class="header-image">
+            <img src="{{post.imgurl}}" alt="" class="header-image">
         </div>
     </section>
-
-    
         
        <br><br><br>
         <!-- Posts -->
@@ -47,7 +45,7 @@
             <p class="post-text">Some of the most momentous building blocks in the crypto industry, such as the Ethereum Virtual Machine (EVM), are still maturing. New iterations will continue evolving, but many developers need more security education to innovate safely on these platforms.</p>
 
             <p class="post-text">This is where we need to educate developers to prevent them from stepping into security traps that prevent composition and growth. How do we navigate getting people into a space where they need to be programming in a safer way? This is the challenge that the industry is up against. Improving tooling and debugging experiences is essential if developers are to cross the chasm from Web2 to Web3, but we also need safer execution engines and more education.</p>
-            <p class="post-text">Web3 envisions a world where millions of developers can build decentralized applications for billions of users to interact with every day. For this to become a reality, the industry needs to entice more developers into the Web3 space by simplifying the onboarding process so that they feel it is a worthwhile opportunity, both economically and philosophically. The next generation of developers may be Web3 natives, but investing in the established Web2 developers who can lay the foundations of a distributed web with the skills in their toolkits cannot be ignored. <a href="https://venturebeat.com/data-infrastructure/why-web2-developers-are-hesitant-to-join-the-blockchain-revolution/"><br> Read more.....</a></p>
+            <p class="post-text">Web3 envisions a world where millions of developers can build decentralized applications for billions of users to interact with every day. For this to become a reality, the industry needs to entice more developers into the Web3 space by simplifying the onboarding process so that they feel it is a worthwhile opportunity, both economically and philosophically. The next generation of developers may be Web3 natives, but investing in the established Web2 developers who can lay the foundations of a distributed web with the skills in their toolkits cannot be ignored. <a href="{{post.newsurl}}"><br> Read more.....</a></p>
             
             <!-- <h2 class="sub-heading">Safety in Web3</h2> -->
         </section>
