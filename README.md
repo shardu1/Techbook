@@ -1,3 +1,1 @@
-"# techbook" 
-"first commit" 
-2nd commit
+Your Go to Place for Tech Updates and more..
