@@ -4,44 +4,40 @@
 {% block appname %}News{% endblock appname %}
 
 {% block body %}
-        </section>
-        <!-- Poster filter -->
-        <div class="post-filter container">
+         <!-- Poster filter -->
+         <div class="post-filter container">
             <span class="filter-item active-filter" data-filter="all">All</span>
             <span class="filter-item" data-filter="technology">Technology</span>
-            <span class="filter-item" data-filter="webdevelopment">Web Development</span>
+            <span class="filter-item" data-filter="artificial-intelligence">AI</span>
+            <span class="filter-item" data-filter="blockchain">Blockchain</span>
+            <span class="filter-item" data-filter="web-development">Web Development</span>
             <span class="filter-item" data-filter="cybersecurity">Cyber Security</span>
+            <!-- search bar -->
+            <div class="search-container">
+                <input type="text" placeholder="Search">
+                <button type="submit">Search</button>
+            </div>                            
         </div>
-       
-        <!-- Posts -->
+
+           <!-- Posts -->
         <section class="post container">
             <!-- Post Box 1 -->
-           
-            {% for post in allPosts  %}
-            <div class="post-box {{post.tag}}">
-                <img src="{{post.imgurl}}" alt="" class="post-img">
-                <!-- <h2 class="category">Web Development</h2> -->
-                <a href="{{post.blogurl}}" class="post-title">
-                    {{post.title}}
+            {% for news in allNews  %}
+            <div class="post-box {{news.query}}">
+                <img src="{{news.imgurl}}" alt="" class="post-img">
+                <a href="/news/{{news.slug}}" class="post-title">
+                    {{news.title}}
                 </a>
-                <p class="post-description">{{post.description}}</p>
+                <span class="post-date">{{news.date}}</span>
+                <p class="post-description">{{news.description}}</p>
             </div>
             {% endfor %}
-
-            <div class="post-box mech">
-                <img src="https://insights.globalspec.com/images/assets/713/19713/13880522763_fba0ba9dee_c_Hero.jpg" alt="" class="post-img">
-                <!-- <h2 class="category">AI</h2> -->
-                <a href="https://energyeducation.ca/encyclopedia/Internal_combustion_engine/" class="post-title">
-                    Internal combustion engine
-                </a>
-                <p class="post-description">Internal combustion engines (ICE) are the most common form of heat engines, as they are used in vehicles, boats, ships, airplanes, and trains. They are named as such because the fuel is ignited in order to do work inside the engine.[1] The same fuel and air mixture is then emitted as exhaust. This can be done using a piston (called a reciprocating engine), or with a turbine.</p>
-            </div>
-
+            
         </section>
 
            <!-- footer -->
            <div class="footer container">
-            <p>&#169; 2023 TechBook All Right Reserved</p>
+            <p>&#169; TechBook All Right Reserved</p>
             <div class="social">
                 <a herf="#"><i class='bx bxl-facebook'></i></a>
                 <a herf="#"><i class='bx bxl-instagram'></i></a>
