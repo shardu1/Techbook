@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 
 {% block title %}Blogs{% endblock title %}
-{% block appname %}Blogs{% endblock appname %}
 
 {% block body %}
+        <section class="home" id="home">
+            <div class="home-text container">
+                <h2 class="home-title">TechBook {% block appname %}Blogs{% endblock appname %}</h2>
+                <span class="home-subtitle">Unveiling the World of Innovation and Progress</span>
+            </div>
+        </section>
         <!-- Poster filter -->
         <div class="post-filter container">
             <span class="filter-item active-filter" data-filter="all">All</span>

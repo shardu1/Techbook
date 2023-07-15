@@ -6,13 +6,17 @@ from news.models import News
 def newsHome(request):
     allNews= News.objects.all()
     context={'allNews':allNews}
-    # return render(request,'news/index.html',context)
-    return render(request,'news/n-index.html',context)
+    # return render(request,'news/search.html',context)
+    return render(request,'news/index.html',context)
 
 def newsPost(request,slug):
     post = News.objects.filter(slug=slug)[0]
     context = {'post':post}
     return render(request,'news/post-page.html',context)
+
+def testing(request):
+    return HttpResponse("Testing")
+
 
 def getNews(request,sluge):
     newsapi = NewsApiClient(api_key='4172d085084342e58d094296122b13af')
@@ -46,3 +50,9 @@ def getNews(request,sluge):
         newsblog.save()
     print("Tecnology news done.")
     return HttpResponse(request,"Technology done")
+
+def search(request):
+    query = request.GET['query']
+    allNews = News.objects.filter(title__icontains=query)
+    context = {'allNews':allNews}
+    return render(request,'news/search.html',context)

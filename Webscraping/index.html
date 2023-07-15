@@ -1,17 +1,54 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBook</title>
+    <!-- Link to CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <!-- Box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-{% block title %}News{% endblock title %}
-{% block appsname %}News{% endblock appsname %}
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- NavBar -->
+        <div class="nav container">       
+            <!-- Logo -->
+        <a href="#" class="logo">Tech<span>Book</span></a>
+        <!-- Home -->
+        <div class="nav-home">
+            <a href="home.html" class="title">Home</a> 
+        </div>
 
-{% block body %}
+        <!-- News -->
+        <div class="nav-news">
+            <a href="home.html" class="title">News</a>
+        </div>
+
+        <!-- Blogs -->
+        <div class="nav-blogs">
+            <a href="home.html" class="title">Blogs</a>
+        </div>
+
+        <!-- Login Btn -->
+        <a href="#" class="login">Login</a>
+        </div>
+    </header>
+
+    
+        <!-- Home -->
         <section class="home" id="home">
             <div class="home-text container">
-                <h2 class="home-title">TechBook {% block appname %}News{% endblock appname %}</h2>
+                <h2 class="home-title">The TechBook Blogs</h2>
                 <span class="home-subtitle">Unveiling the World of Innovation and Progress</span>
             </div>
+
         </section>
-         <!-- Poster filter -->
-         <div class="post-filter container">
+        <!-- Poster filter -->
+        <div class="post-filter container">
             <span class="filter-item active-filter" data-filter="all">All</span>
             <span class="filter-item" data-filter="technology">Technology</span>
             <span class="filter-item" data-filter="artificial-intelligence">AI</span>
@@ -20,10 +57,8 @@
             <span class="filter-item" data-filter="cybersecurity">Cyber Security</span>
             <!-- search bar -->
             <div class="search-container">
-                <form method='get' action='s/search'>
-                    <input name='query' id='query' type="text" placeholder="Search">
-                    <button type="submit">Search</button>
-                </form>
+                <input type="text" name='query' id='query' placeholder="Search">
+                <button type="submit">Search</button>
             </div>                            
         </div>
 
@@ -53,7 +88,12 @@
                 <a herf="#"><i class='bx bxl-linkedin'></i></a>
             </div>
            </div>
-           {% endblock body %}
-
-
-
+        <!-- JQuery -->
+        <script
+            src ="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        <!-- Java script -->
+        <script src="{%static 'js/main.js' %}"></script>
+</body>
+</html>

@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 
-{% block title %}News{% endblock title %}
-{% block appname %}News{% endblock appname %}
+{% block title %}Blogs{% endblock title %}
 
 {% block body %}
-         <!-- Poster filter -->
-         <div class="post-filter container">
+        <section class="home" id="home">
+            <div class="home-text container">
+                <h2 class="home-title">TechBook {% block appname %}News{% endblock appname %}</h2>
+                <span class="home-subtitle">Unveiling the World of Innovation and Progress</span>
+            </div>
+        </section>
+        <!-- Poster filter -->
+        <div class="post-filter container">
             <span class="filter-item active-filter" data-filter="all">All</span>
             <span class="filter-item" data-filter="technology">Technology</span>
             <span class="filter-item" data-filter="artificial-intelligence">AI</span>
@@ -14,12 +19,15 @@
             <span class="filter-item" data-filter="cybersecurity">Cyber Security</span>
             <!-- search bar -->
             <div class="search-container">
-                <input type="text" placeholder="Search">
-                <button type="submit">Search</button>
-            </div>                            
+                <form method='get' action='/news/s/search'>
+                    <input name='query' id='query' type="text" placeholder="Search">
+                    <button type="submit">Search</button>
+                </form>
+            </div>            
+                <span><h3>Search Results:</h3><span>
         </div>
-
-           <!-- Posts -->
+       
+        <!-- Posts -->
         <section class="post container">
             <!-- Post Box 1 -->
             {% for news in allNews  %}
@@ -32,12 +40,11 @@
                 <p class="post-description">{{news.description}}</p>
             </div>
             {% endfor %}
-            
         </section>
 
            <!-- footer -->
            <div class="footer container">
-            <p>&#169; TechBook All Right Reserved</p>
+            <p>&#169; 2023 TechBook All Right Reserved</p>
             <div class="social">
                 <a herf="#"><i class='bx bxl-facebook'></i></a>
                 <a herf="#"><i class='bx bxl-instagram'></i></a>
@@ -46,6 +53,7 @@
             </div>
            </div>
            {% endblock body %}
+
 
 
 
