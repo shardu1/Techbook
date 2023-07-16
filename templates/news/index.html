@@ -13,11 +13,12 @@
          <!-- Poster filter -->
          <div class="post-filter container">
             <span class="filter-item active-filter" data-filter="all">All</span>
-            <span class="filter-item" data-filter="technology">Technology</span>
+            <span class="filter-item" data-filter="india-technology">Technology</span>
             <span class="filter-item" data-filter="artificial-intelligence">AI</span>
             <span class="filter-item" data-filter="blockchain">Blockchain</span>
-            <span class="filter-item" data-filter="web-development">Web Development</span>
-            <span class="filter-item" data-filter="cybersecurity">Cyber Security</span>
+            <span class="filter-item" data-filter="data-security">Cyber Security</span>
+            <span class="filter-item" data-filter="defence-industry">Defence</span>
+            <span class="filter-item" data-filter="space-industry">Space</span>
             <!-- search bar -->
             <div class="search-container">
                 <form method='get' action='s/search'>
@@ -33,7 +34,7 @@
             {% for news in allNews  %}
             <div class="post-box {{news.query}}">
                 <img src="{{news.imgurl}}" alt="" class="post-img">
-                <a href="/news/{{news.slug}}" class="post-title">
+                <a href="/news/{{news.slug}}" target='_blank' class="post-title">
                     {{news.title}}
                 </a>
                 <span class="post-date">{{news.date}}</span>

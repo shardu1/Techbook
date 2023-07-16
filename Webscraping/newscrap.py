@@ -1,26 +1,11 @@
-from newsapi import NewsApiClient
-# from news.models import News
-# Init
-newsapi = NewsApiClient(api_key='4172d085084342e58d094296122b13af')
 
-# /v2/top-headlines
-# top_headlines = newsapi.get_top_headlines(q='bitcoin',
-#                                           sources='bbc-news,the-verge',
-#                                           category='business',
-#                                           language='en',
-#                                           country='us')
+import requests
 
-# /v2/everything
-technology = newsapi.get_everything(
-        q='India+Technology',
-        from_param='2023-07-07',
-        to='2023-07-14',
-        language='en',
+response = requests.get("https://newsapi.org/v2/everything?q=defence&from_param='2023-07-09'&to=2023-07-15&language=en&sort_by=relevancy&apiKey=57f5447c13ba4f98abb41bfe6350d7fb")
 
-        
-    )
+json_body = response.json()
+articles=json_body['articles']
 
-articles = technology['articles']
 
 for article in articles:
     author=article['author']

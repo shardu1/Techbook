@@ -1,7 +1,9 @@
 from django.shortcuts import render,HttpResponse
 from newsapi import NewsApiClient
 from news.models import News
-
+import requests
+import time
+from newsapi import NewsApiClient
 # Create your views here.
 def newsHome(request):
     allNews= News.objects.all()
@@ -19,15 +21,16 @@ def testing(request):
 
 
 def getNews(request,sluge):
-    newsapi = NewsApiClient(api_key='4172d085084342e58d094296122b13af')
-    technology = newsapi.get_everything(
-        q=sluge,
-        from_param='2023-07-07',
-        to='2023-07-14',
-        language='en',
-    )
+    newsapi = NewsApiClient(api_key='57f5447c13ba4f98abb41bfe6350d7fb')
 
-    articles = technology['articles']
+    all_articles = newsapi.get_everything(q=sluge,
+                                      from_param='2023-07-08',
+                                      to='2023-07-15',
+                                      language='en',
+                                      )
+
+    # json_body = response.json()
+    articles=all_articles['articles']
 
     for article in articles:
         author=article['author']
@@ -43,16 +46,18 @@ def getNews(request,sluge):
             imgurl=imgurl,
             newsurl=newsurl,
             description=description,
-            query='environment',
+            query=sluge,
+            # query='space-industry',
             date=date,
             slug=title.replace(" ",'-')
             )
         newsblog.save()
+        # time.sleep(1)
     print("Tecnology news done.")
     return HttpResponse(request,"Technology done")
 
 def search(request):
     query = request.GET['query']
     allNews = News.objects.filter(title__icontains=query)
-    context = {'allNews':allNews}
+    context = {'allNews':allNews,'query':query}
     return render(request,'news/search.html',context)
