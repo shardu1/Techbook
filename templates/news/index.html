@@ -2,6 +2,8 @@
 
 {% block title %}News{% endblock title %}
 {% block appsname %}News{% endblock appsname %}
+{% block b__n %}/blogs{% endblock b__n %}
+{% block b_n %}Blogs{% endblock b_n %}
 
 {% block body %}
         <section class="home" id="home">
@@ -34,7 +36,7 @@
             {% for news in allNews  %}
             <div class="post-box {{news.query}}">
                 <img src="{{news.imgurl}}" alt="" class="post-img">
-                <a href="/news/{{news.slug}}" target='_blank' class="post-title">
+                <a href="{{news.newsurl}}" target='_blank' class="post-title">
                     {{news.title}}
                 </a>
                 <span class="post-date">{{news.date}}</span>

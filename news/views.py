@@ -24,8 +24,8 @@ def getNews(request,sluge):
     newsapi = NewsApiClient(api_key='57f5447c13ba4f98abb41bfe6350d7fb')
 
     all_articles = newsapi.get_everything(q=sluge,
-                                      from_param='2023-07-08',
-                                      to='2023-07-15',
+                                      from_param='2023-07-02',
+                                      to='2023-08-02',
                                       language='en',
                                       )
 
